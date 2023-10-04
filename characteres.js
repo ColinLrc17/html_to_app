@@ -1,7 +1,7 @@
 console.log('Chargement de la liste des personnages...');
 
 // retrieve data from json file
-fetch('../data/characteres.json')
+fetch('characteres.json')
 .then((response) => {
     console.log(response);
     return response.json();

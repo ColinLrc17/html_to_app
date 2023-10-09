@@ -11,7 +11,7 @@ function Para({ color = 'grey', hidden = false }) {
 
 
 const characters = require("./data/characteres.json");
-
+const character = characters[1];
 
 
 function App() {
@@ -25,9 +25,9 @@ function App() {
     <CharacateresList data={characters} /> 
     <p>Le nombre de characteres : <CharacteresCount data={characters} /> </p>
 
-
+    <img src={`${character.thumbnail.path}/standard_large.${character.thumbnail.extension}`}/>
+    <p> {character.description} </p>
     </>
-
   );
 }
 

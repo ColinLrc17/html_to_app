@@ -1,42 +1,18 @@
-import  BlogPost  from './blogpost.js';
-import { Link } from "react-router-dom";
+import Layout from "./Layout";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import CharactersPage from "./pages/CharactersPage";
 
 const routes = [
     {
         path: "/",
-        element: <div>
-            Home
-            <nav>
-                <Link to="/blog">Blog</Link>
-                <Link to="/contact">Contact</Link>
-            </nav>
-        </div>,
+        element: <Layout />,
+        children: [
+            { path: "/", element: <CharactersPage /> },
+            { path: "/about", element: <AboutPage /> },
+            { path: "/contact", element: <ContactPage /> },
+        ],
     },
-    {
-        path: "/blog",
-        element: <div>
-            Blog
-            <nav>
-                <Link to="/blog">Blog</Link>
-                <Link to="/contact">Contact</Link>
-            </nav>
-        </div>,
-    },
-    {
-        path: "/blog/:id",
-        element: <BlogPost />,
-    },
-    {
-        path: "/contact",
-        element: <div>
-            Contact
-            <nav>
-                <Link to="/blog">Blog</Link>
-                <Link to="/contact">Contact</Link>
-            </nav>
-        </div>,
-    }
-    
 ];
 
 export default routes;

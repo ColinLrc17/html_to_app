@@ -4,7 +4,7 @@ import { useLoaderData } from 'react-router';
 import CharacterDetail from '../components/CharacterDetail';
 
 const CharacterDetailPage = () => {
-    // retrieve the character using the useLoaderData hook
+    // retrieve the character using the useLoaderData hook test
     const character = useLoaderData();
 
     useEffect(() => {
